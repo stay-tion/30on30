@@ -1,8 +1,5 @@
-/* bdaystylesheet.css */
 @import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,14 +16,7 @@ html {
 
 .heading h1 {
   font-size: 100px;
-  font-family: "Righteous", sans serif;
-  text-shadow: 10px 10px 2px rgba(6, 72, 88, 0.6);
-  color: rgb(206, 242, 249);
-}
-
-.heading h2 {
-  font-size: 100px;
-  font-family: "Pacifico", cursive;
+  font-family: "Sigmar One", cursive;
   text-shadow: 10px 10px 2px rgba(6, 72, 88, 0.6);
   color: rgb(206, 242, 249);
 }
