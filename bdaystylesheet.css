@@ -1,19 +1,20 @@
-/* portfoliostylesheet.css */
+/* bdaystylesheet.css */
 /*========================================== Style rule for the body element ==========================================*/
 body {
-  background-color: white;
+  /*background-color: white; */
   /*background-image: linear-gradient(#003366,#c9ba95); */
   /* Default font styling */
-  font: 60 pt Times New Roman, Arial, sans-serif; 
+ 
   color: Black;
   margin:0;
+  padding:0;
 }
 
 
-/* Eliminate default margins for all heading types 
+Eliminate default margins for all heading types 
 	h1, h2, h3, h4, h5, h6{
   		margin:0;
-}*/
+}
 
 /* Make HTML5 layout elements block elements for older browsers */
 header, nav, aside, article, footer, section{
