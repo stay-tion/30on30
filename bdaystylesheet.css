@@ -1,456 +1,92 @@
 /* bdaystylesheet.css */
-/*========================================== Style rule for the body element ==========================================*/
-body {
-  /*background-color: white; */
-  /*background-image: linear-gradient(#003366,#c9ba95); */
-  /* Default font styling */
- 
-  color: Black;
-  margin:0;
-  padding:0;
-}
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 
-
-Eliminate default margins for all heading types 
-	h1, h2, h3, h4, h5, h6{
-  		margin:0;
-}
-
-/* Make HTML5 layout elements block elements for older browsers */
-header, nav, aside, article, footer, section{
- display:block;
-}
-
-
-/*========================================== Styling for page header =================================================*/
-header{
-		height: 115px;
-		padding: 15px;
-		
-	/*Font size, line-height, and family*/
-		font: 100px/80px Times New Roman, Serif;
-		color: white;
-		text-align: center;
-		/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;*/
-		
-	/*Background color, image, position*/
-		background-color: black;
-		background-image: none;
-		background-repeat: no-repeat;
-		background-position: 10px center;	
-}
-
-
-/*=========================================== Styling for the sidebar section (aside)=======================================*/
-aside{
- font: 25px Times New Roman, Georgia, Serif;
- width:130px;
- padding:10px;
- float:left;
-}
-
-
-
-
-
-/*============================================= Styling for links in nav section============================================*/
-nav a{
-display:block;
-background-color: black;
-color: white;
-font-weight: bold;
-text-align: center; 
-	 
-/* As wide as the content width */
- width: 100%;
-
-/* Small vertical margin, zero side margin */
- margin: 2px 0;
-
-/* Bigger text */
- font-size: 22px;
-	
-/* Some extra height */
- padding: 12px 0;
-	
-/* No underline or dotted outline */
- text-decoration: none;
- outline: none;
-}
-
-nav a:link, nav a:visited {
- background-color: white;
- color: black;
-}
- 
-nav a:hover, nav a:active {
- background-color: black;
- color: white;
-}
-
-
-
-/*=====================================================Styling for the article/body section======================================*/
-
-/* Style elements inside of header*/
-.block {
-	font-family: Times New Roman, Serif;
-	font-size: 60px;
-	text-align: left;
-	border-style:groove;
-	border-color:white;
-	border-size:10px;
-	margin: 20px 40px 0px 200px;
-	
-
-}
-
-article{
- /* Left margin should match neighboring column full width */
- margin-left:150px;
-}
-
-
-
-
-
-/* Style for bullet points */
-li {
-  line-height: 1.5;
-  margin-top: 0;
-  font: 25px Georgia, Times New Roman, Serif;
-  text-align: left;
-  margin-left: 400px;
-  list-style-position:inside;
-}
-
-
-
-
-/* Style for paragraphs */
-p {
-  line-height: 1.5;
-  margin-top: 0;
-  font: 25px Georgia, Times New Roman, Sans-Serif;
-  text-align: left;
-  margin-left: 400px;
-}
-
-.p-indent {
-  margin-left: 440px;
-}
-
-
-
-
-/* =============================================================== Misc ================================================== */
-/* Highlight any span of text */
-.hilite {
-  background-color: grey;
-}
-/* Create raised appearance with border, rounded corners, and shadow. Works with images, tables, and block elements (div, p, and headings) */
-.raised {
-  border: solid 1px gray;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px gray;
-
-}
-
-
-/* =======================================================Style for overlay==========================================*/
-* {box-sizing: border-box}
-
-/* Container needed to position the overlay */
-.overlay-container {
-  position: relative;
- 
-/*grid*/
-  flex: 50%;
-  padding: 0 0;
-}
-
-/*photo grid settings*/
-.container img {
-  margin-top: 0px;
-}
-
-/* Make the image responsive */
-.overlay-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 5px;
-}
-
-/* The overlay effect - lays on top of the container and over the image */
-.overlay {
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.7); /* white see-through */
-  width: 100%;
-  height: 100%;
-  transition: .5s ease;
-  opacity:0;
-  overflow:none;
-  text-align: center;
-  
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.overlay-container:hover .overlay {
-  opacity: 1;
-}
-
-/*=====================Style for overlay photo grid ==========================*/
-.row {
-  display: flex;
-  max-width: 30%;
-  margin-left: 350px;
-  flex-wrap: wrap;
-  padding: 20px 4px;
-}
-
-
-
-
-
-
-
-
-/* ================================================= Links in article section ============================================ */
-/* Unvisited links */
-article a:link {
-  font: 25px Georgia, Serif;
-  top: -50;
-  color: black;
-  text-decoration: underline overline #000;
-  text-align: center;
-  clear: none;
-}
-
-/* Visited links */
-article a:visited {
-  color: grey;
-  text-decoration: underline overline #000;
-
-}
-
-/* Mouse pointer on link */
-article a:hover {
-  background-color: #bc9f81;
-  color: #1e2953;
-  text-decoration: none;
-}
-
-/* Mouse pointer on link and left button down */
-article a:active {
-  background-color: #1e2953;
-  color: #bc9f81;
-}
-
-
-
-
-
-
-
-/*============================================================== Slideshow ==============================================*/
-
-/* Slideshow container */
-.mySlides {
-  display:inline-block;
-  max-width: 60%;
-  position: relative;
-  margin-left: 27em;
-  margin-right: 12em;
-
-
-}
-
-#slide1 {display:block}
-
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  align: center;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: relative;
-  width: auto;
-  margin-top: 10px;
-  padding: 5px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  margin-left: 10px;
-
-}
-
-/* Position the "next button" to the right */
-.next {
-  top: 0em;
-  right: 5em;
-  border-radius: 3px 0 0 3px;
-  float: right;
-}
-
-.prev {
-	top: 0em;
-	left: 15em;
-	border-radius: 3px 0 0 3px;
-	float: left;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-
-
-/* Caption text */
-.slideshowinstruct {
-	font: 2.2em Georgia, Serif;
-	color:grey;
-	margin-left: 10em;
- 	margin-right: 2em;
-
-}
-
-
-.slideshowcaption {
-  font: 1.2em Georgia, Serif;
-  color:#fff;
-  background:grey; 
-  padding: 0.5em;
-  text-align: center;
-
-	
-
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: none;
-  font-size: 1px;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  position: relative;
-  margin-right: -7em;
-  margin-left: 7em;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-
-
-
-/*====================================Styling the just for fun article section========================================*/
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+* {
   box-sizing: border-box;
+  margin: 0;
+}
+body,
+html {
+  height: 100vh;
+  background-image: url("https://source.unsplash.com/3uTzZrHXHbw");
+  background-size: cover;
+  text-align: center;
+  font-family: "Special Elite", cursive;
 }
 
-.gallery {
-  column-count: 3;
-  --webkit-column-count: 3;
-  --moz-column-count: 3;
-  gap: 1rem;
-  padding: 4rem;
+.heading h1 {
+  font-size: 100px;
+  font-family: "Sigmar One", cursive;
+  text-shadow: 10px 10px 2px rgba(6, 72, 88, 0.6);
+  color: rgb(206, 242, 249);
 }
 
-.jffimage img {
-  height: auto;
-  width: 100%;
+.main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Responsive-ness for different screen-sizes */
-@media screen and (max-width: 810px) {
-  .gallery {
-    column-count: 3;
-    --webkit-column-count: 3;
-    --moz-column-count: 3;
-  }
+.sign {
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  border: 3px solid #363636;
+  box-shadow: 10px 4px 8px 6px rgba(0, 0, 0, 0.2),
+    10px 6px 20px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: all 3s ease-in-out;
+}
+.sign:hover {
+  transform: rotate(2deg);
+}
+#invite_heading {
+  background-color: #3d1;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-@media screen and (max-width: 500px) {
-  .gallery {
-    column-count: 2;
-    --webkit-column-count: 2;
-    --moz-column-count: 2;
-  }
+.sign li {
+  list-style: none;
 }
 
-@media screen and (max-width: 400px) {
-  .gallery {
-    column-count: 1;
-    --webkit-column-count: 1;
-    --moz-column-count: 1;
-  }
+.sign li::before {
+  content: "\f14a";
+  float: left;
+  font-family: "fontawesome";
+}
+#warning {
+  background-color: rgb(245, 89, 227);
+  padding: 10px;
+}
+.polaroid {
+  width: 250px;
+  padding: 10px 10px 20px 10px;
+  border: 3px solid #363636;
+  background-color: white;
+  box-shadow: 8px 8px 6px 2px rgba(0, 0, 0, 0.2);
+  transition: all 3s ease-in-out;
 }
 
-
-
-
-
-  
-/*==========================================Styling for footer=============================================*/
-   footer{
-	clear:both;
-	height:35px;
-	padding:5px;
-	background-color: white;
-	border-bottom-left-radius: 18px;
-	border-bottom-right-radius: 18px;
+.polaroid:hover {
+  transform: rotate(2deg);
+}
+.rotate_right {
+  float: left;
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(8deg);
 }
 
-/*Styling for table in footer*/
-   footer table {
-	width: 98%;
-	margin: 5px auto;
-	color:#fff
-   }
+div.rotate_left {
+  float: left;
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+}
+
+.fa-swimmer {
+  font-size: 50px;
+  color: rgb(1, 204, 231);
+}
