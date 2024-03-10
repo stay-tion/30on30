@@ -1,455 +1,326 @@
-/* bdaystylesheet.css */
-/*========================================== Style rule for the body element ==========================================*/
+/*
+
+Design - https://society6.com/product/retro-80s-swimming-pool_print
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Bungee&family=Bungee+Shade&display=swap");
+
+$font-h1: "Bungee Shade", cursive;
+$font-body: "Alata", sans-serif;
+$font-h2-h3: "Bungee", cursive;
+$hot-pink: rgb(244, 94, 145);
+$pink: rgb(252, 155, 194);
+$purple: rgb(147, 128, 181);
+$blue: rgb(57, 162, 217);
+$turquoise: rgb(48, 178, 160);
+$dark-turquoise: #399fa9;
+$light-blue: rgb(67, 205, 216);
+$light-yellow: rgb(252, 243, 215);
+$yellow: rgb(255, 223, 130);
+$tile: linear-gradient($light-yellow 0.15rem, transparent 0.15rem),
+	linear-gradient(90deg, $light-yellow 0.15rem, transparent 0.15rem);
+
+@mixin shadow {
+	box-shadow: 4rem 4rem 0 0.5rem rgba($purple, 0.75);
+}
+
+@mixin short-shadow {
+	box-shadow: 0.5rem 0 0 0.2rem rgba($purple, 0.75);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
-  background-color: white;
-  /*background-image: linear-gradient(#003366,#c9ba95); */
-  /* Default font styling */
-  font: 60 pt Times New Roman, Arial, sans-serif; 
-  color: Black;
-  margin:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	font-family: $font-body;
+	font-size: 2.5rem;
+	color: $blue;
+	background-color: $yellow;
+	background-image: $tile;
+	background-size: 0.75em 0.75em;
+	overflow: hidden;
 }
 
+.sign {
+	z-index: 1000;
+	background-color: $light-yellow;
+	width: 40%;
+	height: auto;
+	min-width: 40rem;
+	margin: 0 auto;
+	border-radius: 2rem;
+	transform: scale(0.65, 0.65);
 
-/* Eliminate default margins for all heading types 
-	h1, h2, h3, h4, h5, h6{
-  		margin:0;
-}*/
+	:after {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 2rem;
+		box-shadow: 0 0 0 1rem $blue, 0 0 0 2rem $light-yellow,
+			1rem -0.5rem 0 2rem rgba($purple, 0.15);
+	}
 
-/* Make HTML5 layout elements block elements for older browsers */
-header, nav, aside, article, footer, section{
- display:block;
-}
-
-
-/*========================================== Styling for page header =================================================*/
-header{
-		height: 115px;
-		padding: 15px;
-		
-	/*Font size, line-height, and family*/
-		font: 100px/80px Times New Roman, Serif;
-		color: white;
+	h1,
+	h2,
+	h3 {
 		text-align: center;
-		/*text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;*/
-		
-	/*Background color, image, position*/
-		background-color: black;
-		background-image: none;
-		background-repeat: no-repeat;
-		background-position: 10px center;	
+		color: $blue;
+		padding-top: 3rem;
+	}
+	h1 {
+		font-family: $font-h1;
+		font-size: 4.5rem;
+		line-height: 5rem;
+	}
+	h2 {
+		font-family: $font-h2-h3;
+		font-size: 2.75rem;
+		line-height: rem;
+		padding: 1rem;
+		background-color: $hot-pink;
+		color: $light-yellow;
+	}
+	h3 {
+		font-family: $font-h2-h3;
+		font-size: 2.5rem;
+		line-height: 2.75rem;
+		color: $hot-pink;
+		padding: 1rem 0 2rem 0;
+	}
+	ol {
+		margin: 0 auto;
+		padding: 5rem;
+		list-style: none;
+	}
 }
 
-
-/*=========================================== Styling for the sidebar section (aside)=======================================*/
-aside{
- font: 25px Times New Roman, Georgia, Serif;
- width:130px;
- padding:10px;
- float:left;
+.palm-tree {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-
-
-
-
-/*============================================= Styling for links in nav section============================================*/
-nav a{
-display:block;
-background-color: black;
-color: white;
-font-weight: bold;
-text-align: center; 
-	 
-/* As wide as the content width */
- width: 100%;
-
-/* Small vertical margin, zero side margin */
- margin: 2px 0;
-
-/* Bigger text */
- font-size: 22px;
-	
-/* Some extra height */
- padding: 12px 0;
-	
-/* No underline or dotted outline */
- text-decoration: none;
- outline: none;
+.palm-frond {
+	position: absolute;
+	width: 150px;
+	height: 350px;
+	top: 0rem;
+	left: 0rem;
+	background: conic-gradient(
+		from -22deg,
+		$dark-turquoise 0deg 180deg,
+		$turquoise 180deg 360deg
+	);
+	border-radius: 0 100%;
+	@include shadow;
 }
 
-nav a:link, nav a:visited {
- background-color: white;
- color: black;
-}
- 
-nav a:hover, nav a:active {
- background-color: black;
- color: white;
+.divet {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
 }
 
-
-
-/*=====================================================Styling for the article/body section======================================*/
-
-/* Style elements inside of header*/
-.block {
-	font-family: Times New Roman, Serif;
-	font-size: 60px;
-	text-align: left;
-	border-style:groove;
-	border-color:white;
-	border-size:10px;
-	margin: 20px 40px 0px 200px;
-	
-
+.first {
+	top: 15rem;
+	left: 4rem;
+	transform: rotate(40deg);
+	border-bottom: 2.75rem solid $pink;
 }
 
-article{
- /* Left margin should match neighboring column full width */
- margin-left:150px;
+.second {
+	top: 5rem;
+	left: 5rem;
+	transform: rotate(280deg);
+	border-bottom: 2.75rem solid $purple;
 }
 
-
-
-
-
-/* Style for bullet points */
-li {
-  line-height: 1.5;
-  margin-top: 0;
-  font: 25px Georgia, Times New Roman, Serif;
-  text-align: left;
-  margin-left: 400px;
-  list-style-position:inside;
+.one {
+	z-index: 1;
 }
 
-
-
-
-/* Style for paragraphs */
-p {
-  line-height: 1.5;
-  margin-top: 0;
-  font: 25px Georgia, Times New Roman, Sans-Serif;
-  text-align: left;
-  margin-left: 400px;
+.two {
+	transform: rotate(30deg);
+	z-index: 0;
 }
 
-.p-indent {
-  margin-left: 440px;
+.three {
+	transform: rotate(-50deg);
+	z-index: 2;
 }
 
-
-
-
-/* =============================================================== Misc ================================================== */
-/* Highlight any span of text */
-.hilite {
-  background-color: grey;
-}
-/* Create raised appearance with border, rounded corners, and shadow. Works with images, tables, and block elements (div, p, and headings) */
-.raised {
-  border: solid 1px gray;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px gray;
-
+.four {
+	transform: rotate(-70deg);
+	z-index: 2;
+	top: -1rem;
+	left: 5rem;
 }
 
+.parasol {
+	position: absolute;
+	z-index: 100;
+	height: 400px;
+	width: 400px;
+	top: -14rem;
+	right: -10rem;
+	border-radius: 100%;
 
-/* =======================================================Style for overlay==========================================*/
-* {box-sizing: border-box}
-
-/* Container needed to position the overlay */
-.overlay-container {
-  position: relative;
- 
-/*grid*/
-  flex: 50%;
-  padding: 0 0;
+	//off by one degree to smooth transitions
+	background: repeating-conic-gradient(
+		$light-yellow 0deg 45deg,
+		$blue 46deg 90deg,
+		$light-yellow 91deg 100deg
+	);
+	@include shadow;
 }
 
-/*photo grid settings*/
-.container img {
-  margin-top: 0px;
+.flip-flop {
+	position: absolute;
+	height: 80px;
+	width: 40px;
+	top: 12rem;
+	right: 5rem;
+	border-radius: 1rem;
+	background-color: $light-yellow;
+	@include short-shadow;
 }
 
-/* Make the image responsive */
-.overlay-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  padding: 5px;
+.flip-flop:before {
+	content: "";
+	position: absolute;
+	bottom: 1rem;
+	right: 0;
+	border: 5px solid $blue;
+	border-right: 0;
+	border-bottom: 0;
+	border-top-left-radius: 100px;
+	width: 17px;
+	height: 15px;
 }
 
-/* The overlay effect - lays on top of the container and over the image */
-.overlay {
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-  background: rgba(255, 255, 255, 0.7); /* white see-through */
-  width: 100%;
-  height: 100%;
-  transition: .5s ease;
-  opacity:0;
-  overflow:none;
-  text-align: center;
-  
+.flip-flop:after {
+	content: "";
+	position: absolute;
+	bottom: 1rem;
+	left: 0;
+	border: 5px solid $blue;
+	border-left: 0;
+	border-bottom: 0;
+	border-top-right-radius: 100px;
+	width: 17px;
+	height: 15px;
 }
 
-/* When you mouse over the container, fade in the overlay title */
-.overlay-container:hover .overlay {
-  opacity: 1;
+#second-flip-flop {
+	transform: translateX(3.5rem);
 }
 
-/*=====================Style for overlay photo grid ==========================*/
-.row {
-  display: flex;
-  max-width: 30%;
-  margin-left: 350px;
-  flex-wrap: wrap;
-  padding: 20px 4px;
+.chair {
+	position: absolute;
+	width: 250px;
+	height: 600px;
+	top: -15rem;
+	left: 3rem;
+	background: repeating-linear-gradient(
+		90deg,
+		$light-yellow,
+		$light-yellow 50px,
+		$blue 50px,
+		$blue 100px
+	);
+	border-left: 8px solid $yellow;
+	border-right: 8px solid $yellow;
 }
 
-
-
-
-
-
-
-
-/* ================================================= Links in article section ============================================ */
-/* Unvisited links */
-article a:link {
-  font: 25px Georgia, Serif;
-  top: -50;
-  color: black;
-  text-decoration: underline overline #000;
-  text-align: center;
-  clear: none;
+.pool {
+	position: absolute;
+	width: 100vw;
+	height: 100%;
+	top: 55%;
+	left: 0%;
+	background-color: $light-blue;
+	border: 20px solid $light-yellow;
+	@include short-shadow;
 }
 
-/* Visited links */
-article a:visited {
-  color: grey;
-  text-decoration: underline overline #000;
-
+.pool:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(
+			45deg,
+			transparent 0 5rem,
+			rgba($light-yellow, 0.5) 5rem 5.15rem,
+			transparent 5.15rem 6.25rem
+		),
+		linear-gradient(
+			132deg,
+			transparent 0 5rem,
+			rgba($light-yellow, 0.5) 5rem 5.15rem,
+			transparent 5.15rem 6.25rem
+		),
+		linear-gradient(
+			225deg,
+			transparent 0 5rem,
+			rgba($light-yellow, 0.5) 5rem 5.15rem,
+			transparent 5.15rem 6.25rem
+		),
+		linear-gradient(
+			315deg,
+			transparent 0 5rem,
+			rgba($light-yellow, 0.5) 5rem 5.15rem,
+			transparent 5.15rem 6.25rem
+		);
+	background-size: 4.75rem 4.75rem;
+	box-shadow: inset 5rem 5rem 0 2rem rgba($blue, 0.65);
 }
 
-/* Mouse pointer on link */
-article a:hover {
-  background-color: #bc9f81;
-  color: #1e2953;
-  text-decoration: none;
+.inner-tube {
+	position: absolute;
+	bottom: 1rem;
+	left: 45%;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	background: repeating-conic-gradient(
+		$light-yellow 0deg 45deg,
+		$hot-pink 46deg 90deg
+	);
+	@include short-shadow;
 }
 
-/* Mouse pointer on link and left button down */
-article a:active {
-  background-color: #1e2953;
-  color: #bc9f81;
+.inner-tube:after {
+	content: "";
+	position: absolute;
+	bottom: 25%;
+	right: 25%;
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: $light-blue;
+	box-shadow: inset -0.25rem -0.25rem 0 0.15rem $purple;
 }
 
-
-
-
-
-
-
-/*============================================================== Slideshow ==============================================*/
-
-/* Slideshow container */
-.mySlides {
-  display:inline-block;
-  max-width: 60%;
-  position: relative;
-  margin-left: 27em;
-  margin-right: 12em;
-
-
+@media (max-height: 700px) {
+	.sign {
+		transform: scale(0.45, 0.45);
+	}
+	.inner-tube {
+		left: 70%;
+	}
 }
-
-#slide1 {display:block}
-
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  align: center;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: relative;
-  width: auto;
-  margin-top: 10px;
-  padding: 5px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  margin-left: 10px;
-
-}
-
-/* Position the "next button" to the right */
-.next {
-  top: 0em;
-  right: 5em;
-  border-radius: 3px 0 0 3px;
-  float: right;
-}
-
-.prev {
-	top: 0em;
-	left: 15em;
-	border-radius: 3px 0 0 3px;
-	float: left;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-
-
-
-/* Caption text */
-.slideshowinstruct {
-	font: 2.2em Georgia, Serif;
-	color:grey;
-	margin-left: 10em;
- 	margin-right: 2em;
-
-}
-
-
-.slideshowcaption {
-  font: 1.2em Georgia, Serif;
-  color:#fff;
-  background:grey; 
-  padding: 0.5em;
-  text-align: center;
-
-	
-
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: none;
-  font-size: 1px;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  position: relative;
-  margin-right: -7em;
-  margin-left: 7em;
-  height: 15px;
-  width: 15px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-
-
-
-
-/*====================================Styling the just for fun article section========================================*/
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.gallery {
-  column-count: 3;
-  --webkit-column-count: 3;
-  --moz-column-count: 3;
-  gap: 1rem;
-  padding: 4rem;
-}
-
-.jffimage img {
-  height: auto;
-  width: 100%;
-}
-
-/* Responsive-ness for different screen-sizes */
-@media screen and (max-width: 810px) {
-  .gallery {
-    column-count: 3;
-    --webkit-column-count: 3;
-    --moz-column-count: 3;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .gallery {
-    column-count: 2;
-    --webkit-column-count: 2;
-    --moz-column-count: 2;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .gallery {
-    column-count: 1;
-    --webkit-column-count: 1;
-    --moz-column-count: 1;
-  }
-}
-
-
-
-
-
-  
-/*==========================================Styling for footer=============================================*/
-   footer{
-	clear:both;
-	height:35px;
-	padding:5px;
-	background-color: white;
-	border-bottom-left-radius: 18px;
-	border-bottom-right-radius: 18px;
-}
-
-/*Styling for table in footer*/
-   footer table {
-	width: 98%;
-	margin: 5px auto;
-	color:#fff
-   }
