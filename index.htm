@@ -11,6 +11,11 @@
 </head>
 
 <body>
+<script>
+	 //Make older browser aware of new HTML5 layout tags
+	 'header nav aside article footer section'.replace(/\w+/g, function (n) { document.createElement(n) })
+</script>
+	
 <div class="palm-tree one">
 	<div class="palm-frond"></div>
 	<div class="divet first"></div>
