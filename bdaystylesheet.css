@@ -15,7 +15,7 @@ body {
   font-family: "Alata", sans-serif;
   font-size: 2.5rem;
   color: #39a2d9;
-  background-color: #f3f58c;
+  background-color: */#f3f58c*/ #b8f5d8;
   background-image: linear-gradient(#fcf3d7 0.15rem, transparent 0.15rem), linear-gradient(90deg, #fcf3d7 0.15rem, transparent 0.15rem);
   background-size: 0.75em 0.75em;
   overflow: hidden;
