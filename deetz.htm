@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!-- CSS Stylesheet Ref -->
-  <link href="deetz.css" rel="stylesheet" type="text/css" />
-  
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
 
-  <strong>FOOD</strong>
-  <p> TACOS carne asada, chicken, al pastor</p>
-  <p> EGGROLLS </p>
-  <p> SPAM MASUBI</p>
-<br>
+    <div class="background">
+      <div class="water"></div>
+    </div>
+    
+    <svg>
+      <filter id="turbulence" x="0" y="0" width="200%" height="200%">
+        <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
+        <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
+        <animate xlink:href="#sea-filter" attributeName="baseFrequency" dur="60s" 
+        keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
+      </filter>
+    </svg>
 
-  <strong>DRINKS</strong>
-  <p> ALC seltzers </p>
-  <p> NON ALC sparkling cider</p>
- 
-  
-<br> 
-
-
-  
-</body>
+  </body>
+</html>
