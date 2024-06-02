@@ -1,5 +1,30 @@
-/*deetz style*/
-background-color: #f6dda9;
-opacity: 0.9;
-background-image:  linear-gradient(#ffffff 1.9000000000000001px, transparent 1.9000000000000001px), linear-gradient(to right, #ffffff 1.9000000000000001px, #f6dda9 1.9000000000000001px);
-background-size: 38px 38px;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+}
+
+.background {
+  position: fixed;
+padding: 0;
+top: 0;
+  bottom: 0;
+  left: 0;
+right:0;
+  height: 100%;
+  background-image: url("pool.jpg");
+  background-size: cover;
+}
+
+.background .water {
+  position: fixed;
+padding: -1;
+  background-image: url("pool.jpg");
+  background-size: cover;
+  bottom:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  filter: url("#turbulence");
+}
