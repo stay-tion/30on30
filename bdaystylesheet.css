@@ -23,11 +23,10 @@ body {
 .sign {
   z-index: 1000;
   background-color: #fcf3d7;
-  left: 10rem;
   width: 80%;
   height: auto;
   min-width: 40rem;
-  margin: 0 auto;
+  margin: auto auto;
   border-radius: 2rem;
   transform: scale(0.65, 0.65);
 }
