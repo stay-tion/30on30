@@ -2,15 +2,90 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   	 <link href="https://fonts.googleapis.com/css2?family=Modak&family=Rubik+Puddles&display=swap" rel="stylesheet">
+   	 <link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Poetsen+One&display=swap" rel="stylesheet">
+
+
+   <style>
+	p1 {font-size: 65px;}
+	p2 {font-size: 40px;}
+   </style>
+
+
+
+
+
+
+	<script>
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))	{js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}	(document,'script','weatherwidget-io-js');
+	</script>
+
+
+
+</head>
+
+<body>
+
+
+<a href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="America/Los_Angeles" data-textcolor="#ffffff" data-date="2024-06-30 12:00" data-background="#e0df9f" data-digitscolor="#ffffff" data-unitscolor="#777a36"> </a>
+<script src="https://cdn.logwork.com/widget/countdown.js"></script>
+
+<br> 
+<div class="weather">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/34d09n117d89/covina/?unit=us" data-label_1="WEATHER" data-label_2="NEXT 7 DAYS" data-font="Verdana" data-icons="Climacons Animated" data-theme="original" >WEATHER NEXT 7 DAYS</a> 
+</div>
+
+
+
+</div>
 
     <div class="background">
       <div class="water"></div>
     </div>
     
-    <svg>
+     <div class="details">
+	<p1 class = "p1">details</p1>
+<br>
+        <p2 class = "p2">- sun jun 30th @ 12pm</p2></br>
+<br>
+        <p2 class = "p2">- address will be texted a week before</p2></br>
+<br>
+	<p2 class = "p2">- parking available around the lot and streets</p2>	
+    </div>
+<br>
+<br>
+<br>
+    <div class="food">
+	<p1 class = "p1"> food & drinks</p1>	
+	<br>
+	<p2 class = "p2">- tacos</p2>
+	<br>
+	<p2 class = "p2">- eggrolls</p2>
+	<br>        
+	<p2 class = "p2">- fruit and veggies spread</p2>
+	<br>
+	<p2 class = "p2">- seltzers</p2>
+       
+    </div>
+<br>
+<br>
+<br>
+    <div class="byo">
+	<p1 class = "p1"> byo... </p1>
+	<br>
+        <p2 class = "p2">- towel if you plan to swim!</p2>
+	<br>
+	<p2 class = "p2">- alcohol </p2>	
+    </div>
+
+
+    <svg> 
       <filter id="turbulence" x="0" y="0" width="200%" height="200%">
         <feTurbulence id="sea-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05"></feTurbulence>
         <feDisplacementMap scale="20" in="SourceGraphic"></feDisplacementMap>
@@ -18,6 +93,10 @@
         keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.02 0.06" repeatCount="indefinite"/>
       </filter>
     </svg>
+
+
+
+
 
   </body>
 </html>
