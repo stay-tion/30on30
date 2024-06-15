@@ -23,6 +23,7 @@ body {
 .sign {
   z-index: 1000;
   background-color: #fcf3d7;
+  left: 10rem;
   width: 80%;
   height: auto;
   min-width: 40rem;
