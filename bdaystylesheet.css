@@ -33,7 +33,7 @@ body {
 }
 .sign :after {
   content: "";
-  position: absolute;
+  position: fixed; /*was absolute */
   z-index: -1;
   top: 0;
   left: 0;
