@@ -1,25 +1,67 @@
+@font-face {
+  font-family: 'Concert One';
+  src: url(https://fonts.googleapis.com/css2?family=Concert+One&display=swap);
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  display: grid;
+  top: 0;
+  text-align: left;
+  color: #000080;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(220, 13%, 18%);
+  color: hsl(0, 0%, 100%);
+
   
 }
 
+
+
+.p1 {
+  font-family: "Poetsen One", system-ui;
+  font-weight: 400;
+  text-shadow: 2px 2px #000080;
+}
+
+
+.p2{
+  font-family: "Concert One", system-ui;
+  font-weight: 400;
+  text-shadow: 2px 2px #000080;
+}
+
+
+.weather {
+z-index: 1;
+position: relative;
+
+}
+
 .background {
+  z-index:0;
   position: fixed;
-padding: 0;
-top: 0;
+  padding: 0;
+  top: 0;
   bottom: 0;
   left: 0;
-right:0;
+  right:0;
   height: 100%;
   background-image: url("pool.jpg");
   background-size: cover;
 }
 
+
+
 .background .water {
-  position: fixed;
-padding: -1;
+  z-index:0;
+  position: relative;
+  padding: -1;
   background-image: url("pool.jpg");
   background-size: cover;
   bottom:0;
@@ -28,3 +70,83 @@ padding: -1;
   width: 100%;
   filter: url("#turbulence");
 }
+
+
+.beach-ball {
+   z-index:1;
+   border: 8px solid #f7dc6f; /* Yellow */
+   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   position: fixed;
+   animation: bounce 100s infinite alternate;
+}
+
+
+.inner-circle {
+  z-index:1;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #f7dc6f 50%, #ffecb3 50%);
+  animation: bounce 100s infinite alternate;
+
+}
+
+  
+ 	@keyframes bounce {
+ 	     0% {
+    transform: translateY(-50px) translateX(0) rotate(30deg);
+  }
+  25% {
+    transform: translateY(70px) translateX(300px) rotate(20deg);
+  }
+  50% {
+    transform: translateY(100px) translateX(500px);
+  }
+  75% {
+    transform: translateY(50px) translateX(850px) rotate(-20deg);
+  }
+  100% {
+    transform: translateY(-170px) translateX(1200px) rotate(-40deg);
+  }
+}	
+
+
+
+/* linear gradient link (https://cssgradient.io/) */
+
+.details {
+z-index:3;
+position: relative;
+margin: 0;
+top: 10%;
+padding: 20px;
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,0.5) 0%, rgba(148,187,233,0.5) 100%);
+
+}
+
+
+.food {
+z-index:3;
+position: relative;
+margin: 0;
+top: 10%;
+padding: 20px;
+background: rgb(49,78,236);
+background: linear-gradient(90deg, rgba(49,78,236,0.5) 0%, rgba(180,120,40,0.5) 54%, rgba(241,238,128,1) 100%);
+
+}
+
+
+.byo {
+z-index:3;
+position: relative;
+margin: 0;
+padding: 10px;
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,0.5) 0%, rgba(148,187,233,0.5) 100%);
+
+}
+
